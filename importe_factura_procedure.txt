@@ -1,0 +1,13 @@
+fecha en facturas
+
+
+
+delimiter //
+ CREATE PROCEDURE totalfactura (IN idfact INT , OUT totalfact DOUBLE(20,2))
+ BEGIN
+ SELECT SUM(cantidad*precio) INTO totalfact FROM facturas_has_productos INNER JOIN productos ON facturas_has_productos.productos_idarticulos=productos.idarticulos WHERE facturas_idfacturas=idfact ;
+ UPDATE facturas SET importe = totalfact where idfacturas=idfact;
+ END //
+delimiter ;
+
+

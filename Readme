@@ -1,0 +1,1 @@
+Se trata de un programa de gestión para una pequeña empresa en el que administraremos clientes, proveedores, artículos y facturas. La base de datos usada es MySQL 5.5.16. El lenguaje de programación usado es php 5.3.8 bajo el framework orientado a objetos Codeigniter 2.1.0
